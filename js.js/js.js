@@ -16,12 +16,18 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
    accessToken: 'pk.eyJ1IjoiZGVuaXMtMTIiLCJhIjoiY2t0bjI5Y3h3MXB5czJucGRodmJlbDB1eCJ9.q-ToPrTO30Mp0qaO6Jxt9w'
 }).addTo(mymap);
 
+const icon = L.icon({
+    iconUrl:'images/icon-location.svg',
+    iconSize: [46, 56],
+    // iconAnchor: [25, 16]
+});
+const marker = L.marker([la, ln], {icon}).addTo(mymap);
+
 document.getElementById('mapid').style.visibility= 'visible';
 document.getElementById('mapid').style.height= '65vh';
 document.getElementById('mapidd').style.visibility= 'hidden';
 document.getElementById('mapidd').style.height= '0vh';
 
-var marker = L.marker([la, ln]).addTo(mymap);
 
 };
 
@@ -74,6 +80,13 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
    accessToken: 'pk.eyJ1IjoiZGVuaXMtMTIiLCJhIjoiY2t0bjI5Y3h3MXB5czJucGRodmJlbDB1eCJ9.q-ToPrTO30Mp0qaO6Jxt9w'
 }).addTo(mymap2);
 
-var marker = L.marker([lat, lng]).addTo(mymap2);
+
+const icon = L.icon({
+    iconUrl:'images/icon-location.svg',
+    iconSize: [46, 56],
+    // iconAnchor: [25, 16]
+})
+const marker = L.marker([lat, lng], {icon}).addTo(mymap2);
+
 
 
