@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/scss.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+<body>
+  
+  <div class="container"><!--start container-->
+
+    <div class="tracker"><!--start tracker container-->
+
+      <div id="tracker"><!--start tracker-->
+        <div class="title"><h1>IP Address Tracker</h1></div>
+
+        <div id="search">
+          <form id="fm" onsubmit="submitLoginForm(event)">
+            <input type="text" placeholder="Search for any IP address or domain" name="search" id="formSearch">
+            <button type="submit" id="submit"><img src="./images/icon-arrow.svg" alt="image arrow-search"></button>
+           </form>
+        </div>
+
+      </div><!--end #tracker-->
+
+      <div id="location"><!--start location-->
+
+        <div class="info" id="ii">
+            <div class="infoTitle"><h3>IP Address</h3></div>
+             <div class="infoText"><p id="adrress">192.212.174.101</p></div>
+        </div>
+
+        <div class="info">
+            <div class="infoTitle"><h3>Location</h3></div>
+            <div class="infoText"><p id="infoLocation">Dallas Texas, USA</p></div>
+        </div>
+
+        <div class="info">
+            <div class="infoTitle"><h3> Timezone</h3></div>
+           <div class="infoText"><p>UTC <a href="#" id="timezone">-500</a></p></div>
+        </div>
+
+        <div class="info">
+           <div class="infoTitle"><h3>  ISP</h3></div>
+           <div class="infoText"><p id="isp">Limestone</p></div>
+        </div>
+
+      </div><!--end location-->
+ 
+    </div><!--end tracker container-->
+
+    <div id="mapid"></div>
+    <div id="mapidd"></div>
+
+  </div><!--end container-->
+  
+  <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://mod8124.github.io/portfolio_front-end/" target="_blank">Denis Munoz</a>.
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script src="./js.js/js.js"></script>
+</body>
+</html>
